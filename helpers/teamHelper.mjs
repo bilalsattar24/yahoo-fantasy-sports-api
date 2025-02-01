@@ -80,7 +80,8 @@ export function mapMatchups(ms) {
 
 export function mapTeamPoints(team, points) {
   team.points = points.team_points;
-
+  team.team_remaining_games = team.team_remaining_games;
+  team.team_stats = team.team_stats;
   if (points.team_stats) {
     team.stats = mapStats(points.team_stats.stats);
   }
